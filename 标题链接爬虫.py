@@ -13,8 +13,8 @@ def fetch_news(url, output_file):
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            # 发送HTTP请求并忽略SSL证书验证
-            response = requests.get(url, headers=headers, verify=False)
+            # 发送HTTP请求
+            response = requests.get(url, headers=headers)
             response.encoding = 'utf-8'  # 设置编码
 
             # 解析HTML内容

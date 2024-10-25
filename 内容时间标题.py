@@ -18,7 +18,7 @@ session.mount('http://', adapter)
 session.mount('https://', adapter)
 
 def fetch_article_details(url):
-    response = session.get(url, headers=headers, verify=False)
+    response = session.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
     
     # 获取新闻标题
